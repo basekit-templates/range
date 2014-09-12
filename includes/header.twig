@@ -1,0 +1,23 @@
+<!-- Header Include !-->
+<header class="template-header">
+
+	<div class="wrapper">
+
+		<div class="company-info">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.svg'),"showTplWidget":"0"})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+		</div>
+
+<!-- 		<a href="nav" class="menu-link"> </a> -->
+
+		<div class="nav" class="panel" role="navigation">
+			{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+		</div>
+
+	</div>
+
+</header>
+
+
+
+
