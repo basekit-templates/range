@@ -1,7 +1,7 @@
 {
 	"name":"Range",
-	"thumbnail":"mikelli.png",
-	"screenshot":"mikelli.png",
+	"thumbnail":"range.png",
+	"screenshot":"range.png",
     "tags": { "en": ["full screen", "clean", "corporate"] },
     "pageTypes":["home"],
     "templateType":"standard",
