@@ -43,7 +43,7 @@
 
 
 
-/* 2. Mixins */
+/* Mixins */
 
 .border-radius (@radius: 6px) {
     -webkit-border-radius: @radius;
@@ -98,7 +98,7 @@ body {
 
 .bk-header {
 	background: lighten(@color-swatch6, 5%);
-	padding: 30px;
+	padding: 20px 30px 9px 30px;
 	width: 100%;
 	@media @mobile {
 		padding: 25px 30px 15px;
@@ -142,7 +142,7 @@ body {
 }
 
 .bk-nav {
-	background: @color-swatch6;
+	background: @color-swatch3;
 	height: 100%;
 	position: fixed;
 	right: -320px;
@@ -150,27 +150,23 @@ body {
 	.transition( all, 0.5s, ease);
     z-index: 9999;
     .widget.socialicons {
-    	border-left: 1px solid darken(@color-swatch6, 50%);
     	float: left;
-    	padding: 30px 15px;
+    	padding: 30px 35px;
     	margin: 0;
     	width: 100%;
+
+    	span a {
+    		background-color: @color-swatch3;
+    		&:hover {
+    			background-color: darken(@color-swatch3, 10%);
+    		}
+    	}
     }
+
 	@media only screen and (max-height: 450px) {
 		height: auto;
 	}
-    /*&:after {
-    	@media only screen and (max-height: 450px) {
-    		background: @color-swatch6;
-			border-left: 1px solid black;
-			content: "";
-			display: block;
-			height: 100%;
-			right: 0;
-			width: 320px;
-			position: absolute;
-    	}
-    }*/
+
     @media @mobile {
     	right: -250px;
     	width: 250px;
@@ -178,10 +174,12 @@ body {
 }
 
 .widget.extendednavigation {
-	background: @color-swatch6;
+	background: @color-swatch3;
 	float: left;
-	padding: 30px 15px;
+	padding: 40px 0px;
 	width: 100%;
+
+
     ul {
         display: block;
         padding: 0;
@@ -190,15 +188,33 @@ body {
         @media @tablet {
         	display: block;
         }
+
+
         li {
             display: block;
             padding: 10px 0;
             cursor: pointer;
+            border-bottom: 2px solid @color-swatch1;
+            white-space: normal;
+
+            .text {
+            	text-shadow: 1px 1px darken(@color-swatch3,20%);
+            	color: @font-swatch6-color;
+    			font-weight: @font-swatch6-font-weight;
+    			font-family: @font-swatch6-font-family;
+    			&:hover {
+    				color: darken(@font-swatch6-color,10%);
+    			}
+            }
+
+            a {
+            	padding-right: 20px;
+            }
+
             &:before {
 	            display: inline-block;
 	            text-decoration: inherit;
 	            width: 1em;
-	            color: #59e9df;
 	            margin-right: 12px;
 	            text-align: center;
 	            font-variant: normal;
@@ -209,87 +225,100 @@ body {
             &:hover { 
             	.transition( all, 0.5s, ease);
             	ul {
-            		/*background: darken(@color-swatch6, 3%);*/
-            		background: transparent;
-            		border-bottom: 2px solid fade(@color-swatch1, 10%);
-            		border-top: 2px solid fade(@color-swatch1, 10%);
+            		background: lighten(@color-swatch3,10%);
+            		color: darken(@font-swatch6-color,10%);
             		position: relative;
-            		margin-left: 20px;
-            		margin-top: 8px;
-            		width: 90%;
+            		width: 100%;
             		li {
             			padding: 12px 6px;
-            			&:first-child {
-            				padding-top: 20px;
-            			}
             			&:last-child {
             				padding-bottom: 20px;
             			}
             			a {
             				padding-left: 15px;
+            				color: darken(@font-swatch6-color,10%);
             			}
             		}
             		.text {
-            			font-size: bkscale(@font-swatch6-font-size, 0.90);
+            			color: @font-swatch6-color;
+            			font-weight: @font-swatch6-font-weight;
+            			font-family: @font-swatch6-font-family;
             		}
             	}
             }
+
+
             ul {
 				display: none;
 			}
-            @media @tablet {
-            	border-bottom: none;
-            }
+
+
+			// Folder styles
+
             &.folder {
+            	margin-right: 0px;
             	&:after {
-            		border-top-color: lighten(@color-swatch5, 32%);
-            		top: 22px;
+					top: 13px;
+					display: block;
+					content: "+";
+					right: 12px;
+					color: @font-swatch6-color;
+					border: 0;
+
             	}
-            	.text {
-            		color: lighten(@color-swatch5, 32%);
+	            	.text {
+	            		color: @color-swatch1;
+	            		padding-right: 30px;
+
+	            		&:hover {
+		        		color: darken(@font-swatch6-color,10%);
+		        	}
             	}
 	        }
+
 	        a {
-	        	color: lighten(@color-swatch5, 32%);
+	        	color: @color-swatch1;
+
 	        	&:hover {
-	        		color: lighten(@color-swatch5, 60%);
+	        		color: darken(@font-swatch6-color,10%);
 	        	}
 	        }
+
         }
 
     }
+
 	a.pull {
-		background-color: fade(@color-swatch6, 15%);
-		border: 1px solid fade(@color-swatch1, 20%);
-		.border-radius(6px);
 		padding: 11px 9px 0;
 		position: absolute;
-		right: 345px;
-		top: 30px; 
+		right: 355px;
+		top: 40px;
 		display: inline-block;
-		width: 42px;
-		height: 38px;
-		/*text-indent: -900em;*/
+		width: 45px;
+		height: 55px;
 		overflow: hidden;
 		cursor: pointer;
 		outline: none;
-		.transition( all, 0.5s, ease);
+
 	    @media @mobile {
-	    	right: 270px;
+	    	right: 290px;
 	    	top: 16px;
 	    }
-	    &:hover {
-	    	background-color: fade(@color-swatch6, 25%);
-	    	border: 1px solid fade(@color-swatch1, 30%);
-	    	.transition( all, 0.5s, ease);
-	    }
+
 		&:after {
 			content: '';
 			position: absolute;
-			width: 22px;
-			height: 2px;
-			background: white;
-			box-shadow: 0 6px 0 white, 0 12px 0 white;
+			width: 35px;
+			height: 4px;
+			background: @color-swatch3;
+			box-shadow: 0 9px 0 @color-swatch3, 0 18px 0 @color-swatch3;
+
+			//Transitions
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+
 			@media @tablet {
 				top: 11px;
 				right: 9px;
@@ -335,6 +364,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	height: 100%;
 	position: absolute;
 	right: 0; 
+	background-color: @color-swatch3;
 	.transition( all, 0.5s, ease);
 }
 
@@ -346,7 +376,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .widget.feature .feature-bgimg .content {
-	background-color: fade(black, 40%);
 	padding: 100px 40px;
 	height: 100%;
 	text-align: center;
@@ -390,26 +419,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			line-height: bkscale(@font-swatch5-line-height, 1.05);
 		}
 	}
-	button {
-		border: 2px solid fade(white, 35%);
-		background: transparent;
-		.border-radius(8px);
-		padding: 12px 25px 10px;
-		margin-top: 15px;
-		&:hover {
-			background-color: white;
-			color: black;
-			.transition( all, 0.75s, ease);
-		}
-		@media @mobile {
-			padding: 8px 20px;
-			margin-top: 10px;
-		}
-		span {
-			vertical-align: text-bottom;
-		}
-	}
 }
+
+
+
+
 
 /* 5. Main */
 
