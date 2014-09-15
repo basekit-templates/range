@@ -114,11 +114,9 @@ body {
 		vertical-align: top;
 		img {
 			@media @mobile {
-				max-width: 80%;
 				vertical-align: top;
 			}
 			@media only screen and (max-height: 450px) {
-				max-width: 80%;
 				vertical-align: top;
 			}
 		}
@@ -301,8 +299,8 @@ body {
 		outline: none;
 
 	    @media @mobile {
-	    	right: 290px;
-	    	top: 16px;
+	    	right: 280px;
+	    	top: 38px;
 	    }
 
 		&:after {
@@ -322,6 +320,13 @@ body {
 			@media @tablet {
 				top: 11px;
 				right: 9px;
+			}
+		}
+
+		&:hover {
+			&:after {
+				background: darken(@color-swatch3,10%);
+				box-shadow: 0 9px 0 darken(@color-swatch3,10%), 0 18px 0 darken(@color-swatch3,10%);
 			}
 		}
 	}
