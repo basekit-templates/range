@@ -782,6 +782,10 @@
 			border: 3px solid green;
             text-shadow: none;
             padding: 14px 18px 14px 18px;
+            &:hover {
+                background-color: green;
+                box-shadow: none;
+            }
 
             & span.text {
                 color: @color-swatch1;
@@ -802,8 +806,10 @@
         font-weight: @font-swatch4-font-weight;
         &:hover {
             background-color: darken(@color-swatch3,10%);
-            border-top: 3px solid darken(@color-swatch3,10%);
-        border-bottom: 3px solid darken(@color-swatch3,10%);
+            border-top: 0;
+            border-bottom: 0;
+            box-shadow: none;
+            padding: 13px 30px 13px;
         }
     }
 
