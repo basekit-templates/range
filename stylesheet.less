@@ -155,41 +155,12 @@ blockquote p {
 
 }
 
+// Remove absolute positioning and set color
 
-// .page.default.template-header {
-// 	.clearfix;
-// 	clear: both;
-// 	position: relative;
-// 	background-color: @color-swatch6;
-// 	padding: 10px 0 10px 0;
-
-
-// 	// flex
-
-// 	display: -webkit-flexbox;
-// 	display: -ms-flexbox;
-// 	display: -webkit-flex;
-// 	display: flex;
-// 	-webkit-flex-align: center;
-// 	-ms-flex-align: center;
-// 	-webkit-align-items: center;
-// 	align-items: center;
-
-
-
-// 	// Header company name
-
-// 	.companyname {
-// 	.clearfix;
-// 	padding-top: 12px;
-// 	font-family: @font-swatch10-font-family;
-// 	font-size: @font-swatch10-font-size;
-// 	color: @font-swatch10-color;
-// 	font-weight: @font-swatch10-font-weight;
-// 	line-height: @font-swatch10-line-height;
-// 	}
-
-	// }
+.default-template-header {
+	position: relative;
+	background: @color-swatch7;
+}
 
 
 
@@ -224,6 +195,7 @@ blockquote p {
         	display: block;
         }
 
+
         li {
             display: block;
             padding: 10px 0;
@@ -237,6 +209,7 @@ blockquote p {
     			font-weight: @font-swatch6-font-weight;
     			font-family: @font-swatch6-font-family;
             }
+
 
             a {
             	padding-right: 20px;
@@ -252,6 +225,7 @@ blockquote p {
 	            text-transform: none;
 	            line-height: 1em;
         	}
+
 
             &:hover {
             	.transition( all, 0.5s, ease);
@@ -278,6 +252,7 @@ blockquote p {
             	}
             }
 
+
             ul {
 				display: none;
 			}
@@ -296,20 +271,24 @@ blockquote p {
 					border: 0;
 
             	}
-            	.text {
-            		color: @color-swatch1;
-            		padding-right: 30px;
-            		&:hover {
-	        		color: darken(@font-swatch6-color,10%);
-	        	}
+	            	.text {
+	            		color: @color-swatch1;
+	            		padding-right: 30px;
+
+	            		&:hover {
+		        		color: darken(@font-swatch6-color,10%);
+		        	}
             	}
 	        }
+
 	        a {
 	        	color: @color-swatch1;
+
 	        	&:hover {
 	        		color: darken(@font-swatch6-color,10%);
 	        	}
 	        }
+
         }
 
     }
@@ -326,6 +305,7 @@ blockquote p {
 		overflow: hidden;
 		cursor: pointer;
 		outline: none;
+
 	    @media @mobile {
 	    	right: 290px;
 	    	top: 16px;
@@ -359,17 +339,18 @@ blockquote p {
 		}
 	}
 
-	.bk-overlay {
-		width: 100%;
-	}
-}
 
+	// .bk-overlay {
+	// 	width: 100%;
+	// }
+
+}
 
 
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
@@ -377,12 +358,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main, .menu-active .bk-header { 
-	right: 320px; 
+.menu-active #main, .menu-active .bk-header {
+	right: 320px;
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
@@ -395,179 +376,13 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
 	height: 100%;
 	position: absolute;
-	right: 0; 
+	right: 0;
 	.transition( all, 0.5s, ease);
 }
-
-
-
-
-// // Nav clearfix
-
-// .widget.extendednavigation{
-// 	.clearfix;
-// }
-
-
-// // General nav positioning
-
-// .nav {
-// 	float: right;
-// 	width: 70%;
-// 	@media @tablet {
-// 		float: none;
-// 		width: 100%;
-// 	}
-
-// 	@media (max-width: 960px) {
-// 		max-width: 100%;
-// 	}
-// }
-
-// .template-header {
-
-// 	@media (min-width: 770px) {
-// 		.wrapper {
-// 			display: -webkit-flexbox;
-// 			display: -ms-flexbox;
-// 			display: -webkit-flex;
-// 			display: flex;
-// 			-webkit-flex-align: center;
-// 			-ms-flex-align: center;
-// 			-webkit-align-items: center;
-// 			align-items: center;
-// 		}
-// 	}
-// }
-
-
-// // The mobile nav icon
-
-// .widget .extendednavigation a.pull {
-// 	top: 0px;
-// 	height: 30px;
-// 	width: 30px;
-// 	margin-top: 4px;
-
-// 	&:after {
-// 		// *INSERT SOME WICKED STYLES IN HERE FOR THE BURGER ICON*
-// 	}
-// }
-
-
-// // The rest of the nav styles
-
-// .widget .extendednavigation ul,
-// div.widget.extendednavigation ul {
-// 	@media @tablet {
-// 		margin: 20px 0 auto;
-// 		padding: 15px 0 15px 0;
-// 	}
-
-
-// 	li {
-
-// 		float: left;
-
-// 		// // This adds the right hand side border to the nav
-// 		// border-right: 1px solid @color-swatch2;
-
-// 		// // This removes the right hand side border from the last child
-// 		// &:last-child {
-// 		// 	border-right: 0;
-// 		// }
-
-// 		// // This removes the right hand side border from the dropdown menu
-// 		// &:hover ul li {
-// 		// 	border-right: 0;
-// 		// 	padding: 0 5px 0 5px;
-// 		// }
-
-// 		// @media @tablet {
-// 		// 	padding: 0px;
-// 		// 	border-right: 0; // This removes the right hand side border from the mobile nav
-// 		// 	border-bottom: 1px solid @color-swatch2;
-// 		// }
-
-
-// 		// Nav Links
-
-// 		a {
-// 			color: @font-swatch6-color;
-// 			line-height: 40px;
-// 			&:hover {
-// 				color: darken(@font-swatch6-color,10%);
-// 			}
-// 		}
-
-
-// 		// Dropdown Menu
-
-// 		&:hover ul {
-// 			margin: 0;
-// 			width: 100%;
-// 			min-width: 10px;
-// 			background-color: @color-swatch1;
-// 			background-image: none;
-// 		}
-
-// 		&.folder {
-// 			color: @font-swatch6-color;
-// 			&:hover {
-// 				color: darken(@font-swatch6-color,10%);
-//   				background-color: @color-swatch1;
-// 			}
-
-// 			&:after {
-// 				border: 0;
-// 			}
-
-// 			span.text {
-// 				color: @font-swatch6-color;
-// 				line-height: 40px;
-// 				&:hover {
-// 					color: darken(@font-swatch6-color,10%);
-// 				}
-// 			}
-
-// 			& > .text:after {
-// 				display: inline-block;
-//                 content: "";
-//                	width: 0;
-//                	height: 0;
-//                 border: 6px solid transparent;
-//                 border-top-color: @color-swatch5;
-//                 margin-left: 0.4em;
-//                 margin-bottom: -2px;
-// 			}
-
-// 				@media @tablet {
-// 					& > .text:before {
-// 					display: inline-block;
-// 	                content: "";
-// 	               	width: 0;
-// 	               	height: 0;
-// 	                border: 6px solid transparent;
-// 	                border-top-color: @color-swatch5;
-// 	                margin-right: 0.4em;
-// 	                margin-bottom: -2px;
-// 	            }
-
-// 	            	& > .text:after {
-// 	            		display: none;
-// 	            }
-
-// 			}
-
-// 		}
-
-// 	}
-
-// }
 
 
 
@@ -612,8 +427,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 
 }
-
-
 
 
 
@@ -684,8 +497,3 @@ footer.template-footer {
 	}
 
 }
-
-
-
-
-

@@ -1,6 +1,33 @@
 {% extends "layout.twig" %}
 {% block content %}
 
+<section class="page default">
+
+	<header class="default-template-header">
+
+		<div class="wrapper">
+
+			<div class="company-info">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.svg'),"showTplWidget":"0"})|raw}}
+				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			</div>
+
+			<div class="nav" class="panel" role="navigation">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</div>
+
+		</div>
+
+	</header>
+
+	<div class="wrapper">
+		{{zone('main')|raw}}
+	</div>
+
+	{% include 'includes/footer.twig' %}
+
+
+</section>
 
 
 {% endblock %}
