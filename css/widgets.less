@@ -74,10 +74,14 @@ textarea,
 		border-color: @color-swatch2;
 	}
 
-	-ms-input-placeholder {
-	padding-bottom: 23px;
-	}
 }
+
+	// IE 10 placeholder padding fix
+
+	input[type=text],
+	input[type=email]: -ms-input-placeholder {
+		padding-bottom: 23px;
+	}
 
 .widget.ecomcheckout .delivery select {
 	height: 56px;
