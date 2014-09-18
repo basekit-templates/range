@@ -383,11 +383,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .widget.feature .feature-bgimg .content {
-	padding: 170px 40px;
+	padding: 100px 40px;
 	height: 100%;
 	text-align: center;
 	@media @mobile {
-		padding: 100px 20px;
+		padding: 170px 20px;
 		-webkit-overflow-scrolling: touch;
 	}
 	.spare {
@@ -411,6 +411,10 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 	h2 {
 		padding-bottom: 12px;
+		@media @tablet {
+			font-size: bkscale(@font-swatch1-font-size, 0.5);
+			line-height: bkscale(@font-swatch1-line-height, 0.75);
+		}
 		@media @mobile {
 			font-size: bkscale(@font-swatch1-font-size, 0.5);
 			line-height: bkscale(@font-swatch1-line-height, 0.75);
