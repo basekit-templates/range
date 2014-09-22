@@ -7,9 +7,6 @@
 }
 
 input[type=text],
-input[type=email],
-.widget.profile form fieldset input,
-textarea,
-.widget.ecomcheckout .delivery select {
-	padding: 2px 5px 16px 16px;
+input[type=email] {
+	padding: 2px 5px 16px 16px !important;
 }
