@@ -63,7 +63,6 @@ input[type=email],
 .widget.profile form fieldset input,
 textarea,
 .widget.ecomcheckout .delivery select {
-	font-size: 15px;
 	margin: 10px 0;
 	padding: 8px 16px;
 	background-color: @color-swatch1;
@@ -83,9 +82,7 @@ textarea,
 	background-size: 20px;
 }
 
-
 // Contact, Signup, Profile, Delivery
-
 .contactform,
 .signupform,
 .canvas .widget.profile form,
@@ -96,8 +93,6 @@ textarea,
 	background-color: lighten(@color-swatch3,37%);
 	border: 1px solid @color-swatch3;
 	@media @mobile {
-		border-left: 0;
-		border-right: 0;
 		padding: 20px 0px 40px;
 		margin: 30px 0;
 	}
@@ -107,10 +102,19 @@ textarea,
 			width: 100%;
 			height: inherit;
 		}
+		// button.btn {
+		// 	padding: 8px 14px;
+		// 	border: 2px solid @color-swatch2;
+		// 	line-height: @font-swatch7-line-height;
+		// 	&:hover {
+		// 		background-color: @color-swatch2;
+		// 		color: @color-swatch1;
+		// 	}
+		// }
 	}
 	label {
 		font-family: @font-swatch4-font-family;
-		font-size: bkscale(@font-swatch4-font-size,0.8);
+		font-size: @font-swatch4-font-size;
 		font-weight: @font-swatch4-font-weight;
 		line-height: @font-swatch4-line-height;
 		letter-spacing: @font-swatch4-letter-spacing;
@@ -120,17 +124,14 @@ textarea,
 		margin-bottom: 20px;
 	}
 }
-
-
 // Form
-
 .widget.profile form {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	fieldset input {
 		width: 60%;
-		height: 52px;
+		height: 44px;
 		padding: 8px 12px;
 		margin-right: 10px;
 		font-size: 15px;
@@ -139,10 +140,94 @@ textarea,
 			width: 100%;
 		}
 	}
-	button {
-		transform: translate(0,4px);
-	}
 }
+
+
+// input[type=text],
+// input[type=email],
+// .widget.profile form fieldset input,
+// textarea,
+// .widget.ecomcheckout .delivery select {
+// 	font-size: 15px;
+// 	margin: 10px 0;
+// 	padding: 8px 16px;
+// 	background-color: @color-swatch1;
+// 	border: 1px solid @color-swatch3;
+// 	-webkit-appearance: none;
+// 	-moz-appearance: none;
+// 	&:focus {
+// 		border-color: @color-swatch2;
+// 	}
+// }
+
+// .widget.ecomcheckout .delivery select {
+// 	height: 56px;
+// 	margin-bottom: 1em;
+// 	font-size: 12px;
+// 	background-position-x: 98%;
+// 	background-size: 20px;
+// }
+
+
+// // Contact, Signup, Profile, Delivery
+
+// .contactform,
+// .signupform,
+// .canvas .widget.profile form,
+// .bottom-profile .widget.profile form,
+// .delivery {
+// 	padding: 30px 30px 50px;
+// 	margin: 0 0 20px;
+// 	background-color: lighten(@color-swatch3,37%);
+// 	border: 1px solid @color-swatch3;
+// 	@media @mobile {
+// 		border-left: 0;
+// 		border-right: 0;
+// 		padding: 20px 0px 40px;
+// 		margin: 30px 0;
+// 	}
+// 	fieldset {
+// 		margin: 0;
+// 		input {
+// 			width: 100%;
+// 			height: inherit;
+// 		}
+// 	}
+// 	label {
+// 		font-family: @font-swatch4-font-family;
+// 		font-size: bkscale(@font-swatch4-font-size,0.8);
+// 		font-weight: @font-swatch4-font-weight;
+// 		line-height: @font-swatch4-line-height;
+// 		letter-spacing: @font-swatch4-letter-spacing;
+// 		color: @font-swatch4-color;
+// 	}
+// 	input.email {
+// 		margin-bottom: 20px;
+// 	}
+// }
+
+
+// // Form
+
+// .widget.profile form {
+// 	margin: 0;
+// 	padding: 0;
+// 	border: 0;
+// 	fieldset input {
+// 		width: 60%;
+// 		height: 52px;
+// 		padding: 8px 12px;
+// 		margin-right: 10px;
+// 		font-size: 15px;
+// 		text-indent: 0;
+// 		@media @mobile {
+// 			width: 100%;
+// 		}
+// 	}
+// 	button {
+// 		transform: translate(0,4px);
+// 	}
+// }
 
 // -----------------------------
 // #Buttons
