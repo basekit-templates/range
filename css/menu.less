@@ -35,10 +35,6 @@
 .menu-section-list {
 
 	li {
-	border-top: 3px solid @color-swatch3;
-	border-bottom: 3px solid @color-swatch3;
-	padding: 10px 30px 10px;
-
 
 	// Font
 
@@ -57,24 +53,21 @@
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 
-    a {
-    	color: @color-swatch4!important;
-    	padding: 10px 30px 10px;
-    	&:hover {
-			background-color: @color-swatch3;
-			color: @color-swatch1!important;
-			text-decoration: none;
-			text-shadow: 1px 1px darken(@color-swatch3,20%);
+	    a {
+	    	border-top: 3px solid @color-swatch3;
+			border-bottom: 3px solid @color-swatch3;
 			padding: 10px 30px 10px;
-		}
-    }
+	    	color: @color-swatch4!important;
+	    	padding: 10px 30px 10px;
+	    	&:hover {
+				background-color: @color-swatch3;
+				color: @color-swatch1!important;
+				text-decoration: none;
+				text-shadow: 1px 1px darken(@color-swatch3,20%);
+				padding: 10px 30px 10px;
+			}
+	    }
 
-		&:hover {
-			background-color: @color-swatch3;
-			color: @color-swatch1!important;
-			text-decoration: none;
-			text-shadow: 1px 1px darken(@color-swatch3,20%);
-		}
 	}
 
 }
