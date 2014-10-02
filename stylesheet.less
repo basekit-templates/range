@@ -124,6 +124,7 @@ body {
 	&.companyname {
 		white-space: normal;
 		line-height: 25px;
+		font-size: bkscale(@font-swatch10-font-size, 0.96);
 		@media @mobile {
 			max-width: 80%;
 		}
@@ -386,7 +387,10 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	height: 100%;
 	text-align: center;
 	@media @mobile {
-		padding: 170px 20px;
+		padding: 0;
+		margin-top: 80%;
+		display: inline-block;
+		vertical-align: 0;
 		-webkit-overflow-scrolling: touch;
 	}
 	.spare {
