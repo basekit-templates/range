@@ -52,10 +52,10 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 }
 
 /* 3. Header & Navigation */
@@ -113,7 +113,6 @@ body {
 		margin-right: 3px;
 		vertical-align: top;
 		img {
-			max-height: 70px;
 			@media @mobile {
 				vertical-align: top;
 			}
@@ -222,7 +221,7 @@ body {
 	            text-transform: none;
 	            line-height: 1em;
         	}
-            &:hover { 
+            &:hover {
             	.transition( all, 0.5s, ease);
             	ul {
             		background: lighten(@color-swatch3,10%);
@@ -340,7 +339,7 @@ body {
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
@@ -348,12 +347,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main, .menu-active .bk-header { 
-	right: 320px; 
+.menu-active #main, .menu-active .bk-header {
+	right: 320px;
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
@@ -366,11 +365,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
 	height: 100%;
 	position: absolute;
-	right: 0; 
+	right: 0;
 	background-color: @color-swatch3;
 	.transition( all, 0.5s, ease);
 }
@@ -503,7 +502,7 @@ footer.template-footer {
 	}
 
 	.widget.companyname {
-		margin-bottom: 40px;
+		margin-bottom: 10px;
 			a {
 				color: @color-swatch1;
 			}
@@ -545,7 +544,7 @@ footer.template-footer {
 	.copyright-container {
 		border-top: 1px solid darken(@color-swatch1,80%);
 		padding-top: 20px;
-		margin-top: 100px;
+		margin-top: 30px;
 		font-family: @font-swatch4-font-family;
 	}
 

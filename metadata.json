@@ -122,7 +122,7 @@
         },
         "font8": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "68px",
+            "font-size": "58px",
             "font-weight": "400",
             "line-height": "70px",
             "color": "@color-swatch1",
@@ -130,7 +130,7 @@
         },
         "font9": {
             "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
-            "font-size": "42px",
+            "font-size": "32px",
             "font-weight": "inherit",
             "line-height": "65px",
             "color": "@color-swatch1",
