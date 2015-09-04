@@ -1,29 +1,29 @@
-/*	===============================
-	Colour Swatches
-	===============================
-	"color1": == Background
-	"color2": == Contrast colour
-	"color3": == Button colour
-	"color4": == Title colour
-	"color5": == Paragraph colour
-	"color6": == Nav text colour
-	"color7": == Nav background color
-	=============================== */
+/*  ===============================
+    Colour Swatches
+    ===============================
+    "color1": == Background
+    "color2": == Contrast colour
+    "color3": == Button colour
+    "color4": == Title colour
+    "color5": == Paragraph colour
+    "color6": == Nav text colour
+    "color7": == Nav background color
+    =============================== */
 
-/*	===============================
-	Font Swatches
-	===============================
-	"font1":  == Heading 1
-	"font2":  == Heading 2
-	"font3":  == Heading 3
-	"font4":  == Heading 4
-	"font5":  == Paragraph
-	"font6":  == Navigation Text
-	"font7":  == Buttons
-	"font8":  == Feature Title
-	"font9":  == Feature Subtitle
-	"font10": == Logo
-	=============================== */
+/*  ===============================
+    Font Swatches
+    ===============================
+    "font1":  == Heading 1
+    "font2":  == Heading 2
+    "font3":  == Heading 3
+    "font4":  == Heading 4
+    "font5":  == Paragraph
+    "font6":  == Navigation Text
+    "font7":  == Buttons
+    "font8":  == Feature Title
+    "font9":  == Feature Subtitle
+    "font10": == Logo
+    =============================== */
 
 
 
@@ -52,129 +52,130 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;
-	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease;
-	-o-transition:      @prop @time @ease;
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
 }
 
 /* 3. Header & Navigation */
 
 
+
 .bk-pt-home {
-	.widget.feature + .bk-header {
-		background: transparent;
-		padding: 30px 0 30px 30px;
-		position: absolute;
-		top: 0;
-		width: 90%;
-		z-index: 9999;
-		@media @mobile {
-			left: 0;
-			width: 80%;
-		}
-	}
-	.widget.feature.bk-tpl-hidden + .bk-header {
+    .widget.feature + .bk-header {
+        background: transparent;
+        padding: 30px 0 30px 30px;
+        position: absolute;
+        top: 0;
+        width: 90%;
+        z-index: 9999;
+        @media @mobile {
+            left: 0;
+            width: 80%;
+        }
+    }
+    .widget.feature.bk-tpl-hidden + .bk-header {
         background: lighten(@color-swatch6, 5%);
         padding: 30px;
         position: relative;
         width: 100%;
         @media @mobile {
-			padding: 25px 30px 15px;
-		}
+            padding: 25px 30px 15px;
+        }
     }
-	#main {
-		padding-top: 0;
-	}
-	.widget.extendednavigation a.pull {
-		@media @mobile {
-			top: 20px;
-		}
-	}
+    #main {
+        padding-top: 0;
+    }
+    .widget.extendednavigation a.pull {
+        @media @mobile {
+            top: 20px;
+        }
+    }
 }
 
 .bk-header {
-	background: lighten(@color-swatch6, 5%);
-	padding: 20px 30px 9px 30px;
-	width: 100%;
-	@media @mobile {
-		padding: 25px 30px 15px;
-	}
+    background: lighten(@color-swatch6, 5%);
+    padding: 20px 30px 9px 30px;
+    width: 100%;
+    @media @mobile {
+        padding: 25px 30px 15px;
+    }
 }
 
 .widget {
-	&.logo, &.companyname {
-		display: inline-block;
-	}
-	&.logo {
-		margin-right: 3px;
-		vertical-align: top;
-		img {
-			@media @mobile {
-				vertical-align: top;
-			}
-			@media only screen and (max-height: 450px) {
-				vertical-align: top;
-			}
-		}
-	}
-	&.companyname {
-		white-space: normal;
-		line-height: 25px;
-		font-size: bkscale(@font-swatch10-font-size, 0.96);
-		@media @mobile {
-			max-width: 80%;
-		}
-		a {
-			@media @mobile {
-				font-size: bkscale(@font-swatch10-font-size, 0.96);
-				line-height: bkscale(@font-swatch10-font-size, 0.94);
-			}
-			@media only screen and (max-height: 450px) {
-				font-size: bkscale(@font-swatch10-font-size, 0.96);
-				line-height: bkscale(@font-swatch10-font-size, 0.94);
-			}
-		}
-	}
+    &.logo, &.companyname {
+        display: inline-block;
+    }
+    &.logo {
+        margin-right: 3px;
+        vertical-align: top;
+        img {
+            @media @mobile {
+                vertical-align: top;
+            }
+            @media only screen and (max-height: 450px) {
+                vertical-align: top;
+            }
+        }
+    }
+    &.companyname {
+        white-space: normal;
+        line-height: 25px;
+        font-size: bkscale(@font-swatch10-font-size, 0.96);
+        @media @mobile {
+            max-width: 80%;
+        }
+        a {
+            @media @mobile {
+                font-size: bkscale(@font-swatch10-font-size, 0.96);
+                line-height: bkscale(@font-swatch10-font-size, 0.94);
+            }
+            @media only screen and (max-height: 450px) {
+                font-size: bkscale(@font-swatch10-font-size, 0.96);
+                line-height: bkscale(@font-swatch10-font-size, 0.94);
+            }
+        }
+    }
 }
 
 .bk-nav {
-	background: @color-swatch3;
-	height: 100%;
-	position: fixed;
-	right: -320px;
-	width: 320px;
-	.transition( all, 0.5s, ease);
+    background: @color-swatch3;
+    height: 100%;
+    position: fixed;
+    right: -320px;
+    width: 320px;
+    .transition( all, 0.5s, ease);
     z-index: 9999;
     .widget.socialicons {
-    	float: left;
-    	padding: 30px 35px;
-    	margin: 0;
-    	width: 100%;
+        float: left;
+        padding: 30px 35px;
+        margin: 0;
+        width: 100%;
 
-    	span a {
-    		background-color: @color-swatch3;
-    		&:hover {
-    			background-color: darken(@color-swatch3, 10%);
-    		}
-    	}
+        span a {
+            background-color: @color-swatch3;
+            &:hover {
+                background-color: darken(@color-swatch3, 10%);
+            }
+        }
     }
 
-	@media only screen and (max-height: 450px) {
-		height: auto;
-	}
+    @media only screen and (max-height: 450px) {
+        height: auto;
+    }
 
     @media @mobile {
-    	right: -250px;
-    	width: 250px;
+        right: -250px;
+        width: 250px;
     }
 }
 
 .widget.extendednavigation {
-	background: @color-swatch3;
-	float: left;
-	padding: 40px 0px;
-	width: 100%;
+    background: @color-swatch3;
+    float: left;
+    padding: 40px 0px;
+    width: 100%;
 
 
     ul {
@@ -183,7 +184,7 @@
         list-style: none;
         width: 100%;
         @media @tablet {
-        	display: block;
+            display: block;
         }
 
 
@@ -195,188 +196,188 @@
             white-space: normal;
 
             .text {
-            	text-shadow: 1px 1px darken(@color-swatch3,20%);
-            	color: @font-swatch6-color;
-    			font-weight: @font-swatch6-font-weight;
-    			font-family: @font-swatch6-font-family;
-    			&:hover {
-    				color: darken(@font-swatch6-color,10%);
-    			}
+                text-shadow: 1px 1px darken(@color-swatch3,20%);
+                color: @font-swatch6-color;
+                font-weight: @font-swatch6-font-weight;
+                font-family: @font-swatch6-font-family;
+                &:hover {
+                    color: darken(@font-swatch6-color,10%);
+                }
             }
 
             a {
-            	padding-right: 20px;
+                padding-right: 20px;
             }
 
             &:before {
-	            display: inline-block;
-	            text-decoration: inherit;
-	            width: 1em;
-	            margin-right: 12px;
-	            text-align: center;
-	            font-variant: normal;
-	            font-size: 0.75em;
-	            text-transform: none;
-	            line-height: 1em;
-        	}
+                display: inline-block;
+                text-decoration: inherit;
+                width: 1em;
+                margin-right: 12px;
+                text-align: center;
+                font-variant: normal;
+                font-size: 0.75em;
+                text-transform: none;
+                line-height: 1em;
+            }
             &:hover {
-            	.transition( all, 0.5s, ease);
-            	ul {
-            		background: lighten(@color-swatch3,10%);
-            		color: darken(@font-swatch6-color,10%);
-            		position: relative;
-            		width: 100%;
-            		li {
-            			padding: 12px 6px;
-            			&:last-child {
-            				padding-bottom: 20px;
-            			}
-            			a {
-            				padding-left: 15px;
-            				color: darken(@font-swatch6-color,10%);
-            			}
-            		}
-            		.text {
-            			color: @font-swatch6-color;
-            			font-weight: @font-swatch6-font-weight;
-            			font-family: @font-swatch6-font-family;
-            		}
-            	}
+                .transition( all, 0.5s, ease);
+                ul {
+                    background: lighten(@color-swatch3,10%);
+                    color: darken(@font-swatch6-color,10%);
+                    position: relative;
+                    width: 100%;
+                    li {
+                        padding: 12px 6px;
+                        &:last-child {
+                            padding-bottom: 20px;
+                        }
+                        a {
+                            padding-left: 15px;
+                            color: darken(@font-swatch6-color,10%);
+                        }
+                    }
+                    .text {
+                        color: @font-swatch6-color;
+                        font-weight: @font-swatch6-font-weight;
+                        font-family: @font-swatch6-font-family;
+                    }
+                }
             }
 
 
             ul {
-				display: none;
-			}
+                display: none;
+            }
 
 
-			// Folder styles
+            // Folder styles
 
             &.folder {
-            	margin-right: 0px;
-            	&:after {
-					top: 13px;
-					display: block;
-					content: "+";
-					right: 12px;
-					color: @font-swatch6-color;
-					border: 0;
+                margin-right: 0px;
+                &:after {
+                    top: 13px;
+                    display: block;
+                    content: "+";
+                    right: 12px;
+                    color: @font-swatch6-color;
+                    border: 0;
 
-            	}
-	            	.text {
-	            		color: @color-swatch1;
-	            		padding-right: 30px;
+                }
+                    .text {
+                        color: @color-swatch1;
+                        padding-right: 30px;
 
-	            		&:hover {
-		        		color: darken(@font-swatch6-color,10%);
-		        	}
-            	}
-	        }
+                        &:hover {
+                        color: darken(@font-swatch6-color,10%);
+                    }
+                }
+            }
 
-	        a {
-	        	color: @color-swatch1;
+            a {
+                color: @color-swatch1;
 
-	        	&:hover {
-	        		color: darken(@font-swatch6-color,10%);
-	        	}
-	        }
+                &:hover {
+                    color: darken(@font-swatch6-color,10%);
+                }
+            }
 
         }
 
     }
 
-	a.pull {
-		padding: 11px 9px 0;
-		position: absolute;
-		right: 355px;
-		top: 40px;
-		display: inline-block;
-		width: 45px;
-		height: 55px;
-		overflow: hidden;
-		cursor: pointer;
-		outline: none;
+    a.pull {
+        padding: 11px 9px 0;
+        position: absolute;
+        right: 355px;
+        top: 40px;
+        display: inline-block;
+        width: 45px;
+        height: 55px;
+        overflow: hidden;
+        cursor: pointer;
+        outline: none;
 
-	    @media @mobile {
-	    	right: 280px;
-	    	top: 38px;
-	    }
+        @media @mobile {
+            right: 280px;
+            top: 38px;
+        }
 
-		&:after {
-			content: '';
-			position: absolute;
-			width: 35px;
-			height: 4px;
-			background: @color-swatch3;
-			box-shadow: 0 9px 0 @color-swatch3, 0 18px 0 @color-swatch3;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 4px;
+            background: @color-swatch3;
+            box-shadow: 0 9px 0 @color-swatch3, 0 18px 0 @color-swatch3;
 
-			//Transitions
-			-webkit-transition: all 0.2s linear;
-			-moz-transition: all 0.2s linear;
-			-o-transition: all 0.2s linear;
-			transition: all 0.2s linear;
+            //Transitions
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
 
-			@media @tablet {
-				top: 11px;
-				right: 9px;
-			}
-		}
+            @media @tablet {
+                top: 11px;
+                right: 9px;
+            }
+        }
 
-		&:hover {
-			&:after {
-				background: darken(@color-swatch3,10%);
-				box-shadow: 0 9px 0 darken(@color-swatch3,10%), 0 18px 0 darken(@color-swatch3,10%);
-			}
-		}
-	}
-	.bk-overlay {
-		width: 100%;
-	}
+        &:hover {
+            &:after {
+                background: darken(@color-swatch3,10%);
+                box-shadow: 0 9px 0 darken(@color-swatch3,10%), 0 18px 0 darken(@color-swatch3,10%);
+            }
+        }
+    }
+    .bk-overlay {
+        width: 100%;
+    }
 }
 
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
-	display: block;
-	li {
-		display: block;
-	}
+    display: block;
+    li {
+        display: block;
+    }
 }
 
 div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
-	display: block!important;
+    display: block!important;
 }
 
 .menu-active .widget.extendednavigation#slide-menu {
-	right: 0px;
+    right: 0px;
 }
 
 .menu-active #main, .menu-active .bk-header {
-	right: 320px;
-	.transition( all, 0.5s, ease);
+    right: 320px;
+    .transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
-    	right: 250px;
+        right: 250px;
     }
 }
 
 #main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
-	.transition( all, 0.5s, ease);
-	-webkit-backface-visibility: hidden;
+    .transition( all, 0.5s, ease);
+    -webkit-backface-visibility: hidden;
 }
 
 .menu-active .bk-nav {
-	display: table;
-	height: 100%;
-	position: absolute;
-	right: 0;
-	background-color: @color-swatch3;
-	.transition( all, 0.5s, ease);
+    display: table;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: @color-swatch3;
+    .transition( all, 0.5s, ease);
 }
 
 /* 4. Feature */
 
 .widget.feature {
-	border-right: 1px solid darken(@color-swatch6, 50%);
-	height: 100%;
+    border-right: 1px solid darken(@color-swatch6, 50%);
+    height: 100%;
     text-align: center;
 }
 
@@ -386,62 +387,62 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .widget.feature .feature-bgimg .content {
-	padding: 170px 40px;
-	height: 100%;
-	text-align: center;
-	@media @mobile {
-		padding: 0;
-		margin-top: 80%;
-		display: inline-block;
-		vertical-align: 0;
-		-webkit-overflow-scrolling: touch;
-	}
-	.spare {
-		@media only screen and (max-height: 450px) {
-			position: relative;
-			top: 30px;
-			h2 {
-				font-size: bkscale(@font-swatch1-font-size, 0.62);
-				line-height: bkscale(@font-swatch1-line-height, 0.68);
-				padding-bottom: 8px;
-			}
-			h3 {
-				font-size: bkscale(@font-swatch5-font-size, 0.95);
-				line-height: bkscale(@font-swatch5-line-height, 1.05);
-			}
-			button {
-				padding: 8px 15px;
-				margin-top: 12px;
-			}
-		}
-	}
-	h2 {
-		padding-bottom: 12px;
-		@media @tablet {
-			font-size: bkscale(@font-swatch8-font-size, 0.95);
-			line-height: bkscale(@font-swatch8-line-height, 0.95);
-		}
-		@media @mobile {
-			font-size: bkscale(@font-swatch1-font-size, 0.68);
-			line-height: bkscale(@font-swatch1-line-height, 0.7);
-		}
-		@media only screen and (max-height: 420px) {
-			font-size: bkscale(@font-swatch1-font-size, 0.68);
-			line-height: bkscale(@font-swatch1-line-height, 0.75);
-		}
-	}
-	h3 {
-		line-height: bkscale(@font-swatch9-line-height, 0.75);
-		@media @tablet {
-			font-size: bkscale(@font-swatch9-font-size, 0.85);
-			line-height: bkscale(@font-swatch9-line-height, 0.75);
-		}
-		@media @mobile {
-			font-size: bkscale(@font-swatch5-font-size, 0.68);
-			line-height: bkscale(@font-swatch5-line-height, 0.68);
-			padding-bottom: 30px;
-		}
-	}
+    padding: 170px 40px;
+    height: 100%;
+    text-align: center;
+    @media @mobile {
+        padding: 0;
+        margin-top: 80%;
+        display: inline-block;
+        vertical-align: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+    .spare {
+        @media only screen and (max-height: 450px) {
+            position: relative;
+            top: 30px;
+            h2 {
+                font-size: bkscale(@font-swatch1-font-size, 0.62);
+                line-height: bkscale(@font-swatch1-line-height, 0.68);
+                padding-bottom: 8px;
+            }
+            h3 {
+                font-size: bkscale(@font-swatch5-font-size, 0.95);
+                line-height: bkscale(@font-swatch5-line-height, 1.05);
+            }
+            button {
+                padding: 8px 15px;
+                margin-top: 12px;
+            }
+        }
+    }
+    h2 {
+        padding-bottom: 12px;
+        @media @tablet {
+            font-size: bkscale(@font-swatch8-font-size, 0.95);
+            line-height: bkscale(@font-swatch8-line-height, 0.95);
+        }
+        @media @mobile {
+            font-size: bkscale(@font-swatch1-font-size, 0.68);
+            line-height: bkscale(@font-swatch1-line-height, 0.7);
+        }
+        @media only screen and (max-height: 420px) {
+            font-size: bkscale(@font-swatch1-font-size, 0.68);
+            line-height: bkscale(@font-swatch1-line-height, 0.75);
+        }
+    }
+    h3 {
+        line-height: bkscale(@font-swatch9-line-height, 0.75);
+        @media @tablet {
+            font-size: bkscale(@font-swatch9-font-size, 0.85);
+            line-height: bkscale(@font-swatch9-line-height, 0.75);
+        }
+        @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.68);
+            line-height: bkscale(@font-swatch5-line-height, 0.68);
+            padding-bottom: 30px;
+        }
+    }
 }
 
 
@@ -451,16 +452,16 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 /* 5. Main */
 
 .contain {
-	padding: 40px;
-	margin: 0 auto;
-	max-width: 1600px;
-	@media @mobile {
-		padding: 20px;
-	}
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1600px;
+    @media @mobile {
+        padding: 20px;
+    }
 }
 
 #main {
-	display: block;
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -475,11 +476,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
-	background: lighten(@color-swatch6, 5%);
-	padding: 30px;
-	position: relative;
-	right: 0!important;
-	width: 100%;
+    background: lighten(@color-swatch6, 5%);
+    padding: 30px;
+    position: relative;
+    right: 0 !important;
+    width: 100%;
 }
 
 
@@ -490,79 +491,68 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 
 footer.template-footer {
-	background-color: @color-swatch4;
-	min-height: 150px;
-	color: @color-swatch1;
-	p {
-		color: @color-swatch1;
-	}
+    background-color: @color-swatch4;
+    min-height: 150px;
+    color: @color-swatch1;
+    p {
+        color: @color-swatch1;
+    }
 
-	h2 {
-	color: @color-swatch1;
-	font-size:bkscale(@font-swatch2-font-size, 0.9);
-	padding-bottom: 20px;
-	}
+    h2 {
+    color: @color-swatch1;
+    font-size:bkscale(@font-swatch2-font-size, 0.9);
+    padding-bottom: 20px;
+    }
 
-	.footer-content {
-		text-align: center;
-	}
+    .footer-content {
+        text-align: center;
+    }
 
-	.widget.companyname {
-		margin-bottom: 10px;
-			a {
-				color: @color-swatch1;
-			}
-	}
+    .widget.companyname {
+        margin-bottom: 10px;
+            a {
+                color: @color-swatch1;
+            }
+    }
 
 
-	// Profile widget styles
+    // Profile widget styles
 
-	.widget.profile {
-		.bk-profile-phone {
+    .widget.profile {
+        .bk-profile-phone {
 
-			&:before {
-	        content: '';
-	        background-image: image('/images/Phone.svg');
-	        background-size: 20px;
-	        background-repeat: no-repeat;
-	        float: left;
-	        width: 20px;
-	        height: 20px;
-	        padding-right: 8px;
-	        margin-top: 8px;
-	    	}
-		}
-		.bk-profile-socialicons span a {
-			background-color: transparent;
-			background-size: 28px;
-			text-indent: 9999px;
-			overflow: hidden;
-		}
+            &:before {
+            content: '';
+            background-image: image('/images/Phone.svg');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            float: left;
+            width: 20px;
+            height: 20px;
+            padding-right: 8px;
+            margin-top: 8px;
+            }
+        }
+        .bk-profile-socialicons span a {
+            background-color: transparent;
+            background-size: 28px;
+            text-indent: 9999px;
+            overflow: hidden;
+        }
 
-		form button {
-				color: @color-swatch1 !important;
-		}
+        form button {
+                color: @color-swatch1 !important;
+        }
 
-	}
+    }
 
-		// Copyright style
+        // Copyright style
 
-	.copyright-container {
-		border-top: 1px solid darken(@color-swatch1,80%);
-		padding-top: 20px;
-		margin-top: 30px;
-		font-family: @font-swatch4-font-family;
-	}
+    .copyright-container {
+        border-top: 1px solid darken(@color-swatch1,80%);
+        padding-top: 20px;
+        margin-top: 30px;
+        font-family: @font-swatch4-font-family;
+    }
 
 }
-
-/* Scrollbars */
-
-// body, html {
-// 	-ms-overflow-style: none;
-// }
-
-// ::-webkit-scrollbar {
-// 	width: 0px!important;
-// 	height: 0px!important;
-// }
