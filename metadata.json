@@ -1,7 +1,7 @@
 {
 	"name":"Range",
 	"thumbnail":"range.png",
-	"screenshot":"range.png",
+	"screenshot":"range-screenshot.jpg",
     "tags": { "en": ["full screen", "clean", "corporate"] },
     "pageTypes":["home"],
     "templateType":"standard",
