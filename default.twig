@@ -4,6 +4,11 @@
 <div id="wrap">
 	<nav class="bk-nav" id="nav">
 		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+
+		{% if plugins.ecommerce.store.live %}
+            {{widget('ecombasket', 'shopbasket', {})|raw}}
+        {% endif %}
+
 		{{widget('socialicons', 'social', {'googleplus': 'profile', 'linkedin':'profile', 'facebook': 'profile', 'twitter': 'profile', 'youtube': 'profile', 'rss': 'profile'})|raw}}
 	</nav>
 	<div role="main" id="main">
