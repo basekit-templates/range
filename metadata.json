@@ -1,5 +1,6 @@
 {
 	"name":"Range",
+	"versionTenCompatible": 1,
 	"thumbnail":"range.png",
 	"screenshot":"range-screenshot.jpg",
     "tags": { "en": ["full screen", "clean", "corporate"] },
