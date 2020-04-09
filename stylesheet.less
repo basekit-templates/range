@@ -39,7 +39,13 @@
 @import "@{templateLocal}/css/menu.less";
 @import "@{templateLocal}/css/blog.less";
 
-
+html,
+body,
+#wrap,
+.bk-pt-home,
+[data-role="main"] {
+    height: 100%;
+}
 
 
 
@@ -95,11 +101,14 @@
 }
 
 .bk-header {
+    .align-items(center);
     background: lighten(@color-swatch6, 5%);
-    padding: 20px 30px 9px 30px;
+    .flex-display;
+    .flex-wrap(wrap);
+    padding: 20px 100px 9px 30px;
     width: 100%;
     @media @mobile {
-        padding: 25px 30px 15px;
+        padding: 25px 75px 15px 30px;
     }
 }
 
