@@ -4,149 +4,165 @@
 
 
 #migrated-site {
-  @editor-desktop-breakpoint: 930px;
+    @editor-desktop-breakpoint: 930px;
 
-  &.edit {
-    .bk-nav {
-      background: transparent;
+    &.edit {
+      
+        &.row-editing,
+        &.is-move-mode {
+          a.pull {
+            display: none;
+          }
+        }
+        
+        [data-widget-type="feature"] {
+          z-index: 1;
+        }
 
-      @media only screen and (min-width: @editor-desktop-breakpoint) {
-        height: 0;
-        right: -220px;
-      }
+        .bk-header {
+          z-index: 2;
+        }
 
-      .extendednavigation {
-        background: transparent;
-      }
+        .bk-nav {
+          background: transparent;
+          z-index: 3;
+        }
 
-      .js-menu-list,
-      .socialicons {
-        display: none !important;
-      }
+        [data-widget-type="extendednavigation"] .widget-overlay {
+          height: 40px;
+          left: initial;
+          right: 340px;
+          top: 28px;
+          width: 50px;
+
+          @media only screen and (min-width: @editor-desktop-breakpoint) {
+            right: 445px;
+            top: 30px;
+          }
+
+          @media @mobile {
+            right: 272px;
+            top: 18px;
+          }
+
+          .widget__item--visibility {
+            right: -15px;
+            top: -15px;
+          }
+        }
+
+        .extendednavigation a.pull {
+          right: 345px;
+
+          @media only screen and (min-width: @editor-desktop-breakpoint) {
+            right: 450px;
+          }
+
+          @media @mobile {
+            right: 275px;
+          }
+        }
+
+        #main {
+            position: relative;
+            overflow: visible;
+        }
+
+        .row-template-preview__template-add-button {
+            height: auto;
+        }
     }
 
-    #main {
-      position: relative;
-      overflow: visible;
+    // Template wrapper (replace with corresponding template classes)
+    #contain {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
     }
 
-    .widget.feature {
-      height: 100vh;
+
+    .widget.signupform fieldset button {
+        width: auto;
     }
 
-    .row-template-preview__template-add-button {
-      height: auto;
+
+    // Migration styles
+    // -----------------------------
+
+
+    // Replace with corresponding template values
+    @spacing__first--desktop: 40px;
+    @spacing__first--mobile: 20px;
+    @spacing--other: 30px;
+
+
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not(.row) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1520px;
+        width: ~"calc(100% - 40px)";
+
+        @media only screen and (min-width: 481px) {
+            width: ~"calc(100% - 80px)";
+        }
     }
-  }
 
-  // Template wrapper (replace with corresponding template classes)
-  #contain {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
+    .row:not(.widget):not(.row--width-no-padding) .row__container {
+        max-width: 1600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: @spacing__first--mobile;
+        padding-right: @spacing__first--mobile;
 
-
-  // Migration styles
-  // -----------------------------
-
-
-  // Replace with corresponding template values
-  @spacing__first--desktop: 40px;
-  @spacing__first--mobile: 20px;
-  @spacing--other: 30px;
-
-
-  // Applies spacing to widgets to mimic container width
-  .empty-zone,
-  #page-zones__main:empty,
-  #page-zones__main > .widget:not(.row) {
-    margin-left: @spacing__first--mobile;
-    margin-right: @spacing__first--mobile;
-    max-width: 1520px;
-
-    @media only screen and (min-width: 481px) {
-      margin-left: @spacing__first--desktop;
-      margin-right: @spacing__first--desktop;
+        @media only screen and (min-width: 481px) {
+            padding-left: @spacing__first--desktop;
+            padding-right: @spacing__first--desktop;
+        }
     }
-  }
 
-  .row:not(.widget):not(.row--width-no-padding) .row__container {
-    max-width: 1600px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: @spacing__first--mobile;
-    padding-right: @spacing__first--mobile;
 
-    @media only screen and (min-width: 481px) {
-      padding-left: @spacing__first--desktop;
-      padding-right: @spacing__first--desktop;
+    // Move spacing to first widget in the main zone (not sections)
+    &.edit #page-zones__main-overlay + .widget:not(.row),
+    #page-zones__main > .widget:not(.row):first-child {
+        margin-top: @spacing__first--mobile;
+
+        @media only screen and (min-width: 481px) {
+            margin-top: @spacing__first--desktop;
+        }
     }
-  }
 
-  &:not(.edit) .empty-zone,
-  &:not(.edit) #page-zones__main:empty,
-  &:not(.edit) #page-zones__main > .widget:not(.row) {
-    @media only screen and (min-width: 1601px) {
-      margin-left: auto;
-      margin-right: auto;
+
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not(.row):last-child {
+        margin-bottom: @spacing__first--mobile;
+
+        @media only screen and (min-width: 481px) {
+            margin-bottom: @spacing__first--desktop;
+        }
     }
-  }
 
-  &.edit .empty-zone,
-  &.edit #page-zones__main:empty,
-  &.edit #page-zones__main > .widget:not(.row) {
-    @media only screen and (min-width: 1801px) {
-      margin-left: auto;
-      margin-right: auto;
+
+    // Add spacing to the top of a widget when it follows a section
+    #page-zones__main > .row + .widget:not(.row) {
+        margin-top: @spacing--other;
     }
-  }
 
 
-  // Move spacing to first widget in the main zone (not sections)
-  &.edit #page-zones__main-overlay + .widget:not(.row),
-  #page-zones__main > .widget:not(.row):first-child {
-    margin-top: @spacing__first--mobile;
-
-    @media only screen and (min-width: 481px) {
-      margin-top: @spacing__first--desktop;
+    // Remove spacing if widget follows a light section (change to dark if template has a dark BG)
+    #page-zones__main > .row.style--light + .widget:not(.row) {
+        margin-top: 0;
     }
-  }
 
 
-  // Move spacing to last widget in the main zone (not sections)
-  #page-zones__main > .widget:not(.row):last-child {
-    margin-bottom: @spacing__first--mobile;
-
-    @media only screen and (min-width: 481px) {
-      margin-bottom: @spacing__first--desktop;
+    // Adds spacing to the section when a widget is before it
+    #page-zones__main > .widget:not(.row) + .row {
+        margin-bottom: 0;
+        margin-top: @spacing--other;
     }
-  }
-
-
-  // Add spacing to the top of a widget when it follows a section
-  #page-zones__main > .row + .widget:not(.row) {
-    margin-top: @spacing--other;
-  }
-
-
-  // Remove spacing if widget follows a light section (change to dark if template has a dark BG)
-  #page-zones__main > .row.style--light + .widget:not(.row) {
-    margin-top: 0;
-  }
-
-
-  // Adds spacing to the section when a widget is before it
-  #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: 0;
-    margin-top: @spacing--other;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-  }
-
 }
 
 // End of #migrated-site
